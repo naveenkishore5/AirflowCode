@@ -1,0 +1,26 @@
+[2023-03-13 22:05:05,023] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:00:00+00:00 [queued]>
+[2023-03-13 22:05:05,033] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:00:00+00:00 [queued]>
+[2023-03-13 22:05:05,033] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:05:05,034] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:05:05,034] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:05:05,042] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 22:00:00+00:00
+[2023-03-13 22:05:05,050] {standard_task_runner.py:52} INFO - Started process 7043 to run task
+[2023-03-13 22:05:05,055] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T22:00:00+00:00', '--job-id', '135', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpp10u691v', '--error-file', '/tmp/tmpahn078bb']
+[2023-03-13 22:05:05,056] {standard_task_runner.py:80} INFO - Job 135: Subtask extract_user
+[2023-03-13 22:05:05,117] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T22:00:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:05:05,180] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:00:00+00:00
+[2023-03-13 22:05:05,182] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 22:05:05,192] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 22:05:05,194] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 22:05:05,338] {http.py:106} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Fedir","last":"Zosenko"},"location":{"street":{"number":3760,"name":"Tagilska"},"city":"Krasnogorivka","state":"Rivnenska","country":"Ukraine","postcode":26438,"coordinates":{"latitude":"78.3937","longitude":"-111.0711"},"timezone":{"offset":"-2:00","description":"Mid-Atlantic"}},"email":"fedir.zosenko@example.com","login":{"uuid":"e556d7b2-2ce2-4061-a991-2516b89ff78a","username":"purplebutterfly267","password":"melissa","salt":"jX5kdAeO","md5":"7c45a51da025e168fe7ea5e305380541","sha1":"1c46b23bb495a1fdc03bcd2c21e087cc205a838e","sha256":"6f0de899f065abfed063faf5f5776d0f643196d93c18bd84896b3db484db1f46"},"dob":{"date":"1965-11-29T11:27:04.983Z","age":57},"registered":{"date":"2003-10-05T22:06:06.380Z","age":19},"phone":"(098) N59-9456","cell":"(067) H73-9719","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/39.jpg","medium":"https://randomuser.me/api/portraits/med/men/39.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/39.jpg"},"nat":"UA"}],"info":{"seed":"62910c5416aae030","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 22:05:05,363] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T220000, start_date=20230313T220505, end_date=20230313T220505
+[2023-03-13 22:05:05,391] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:05:05,424] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

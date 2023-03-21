@@ -1,0 +1,26 @@
+[2023-03-13 22:15:03,167] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:10:00+00:00 [queued]>
+[2023-03-13 22:15:03,174] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:10:00+00:00 [queued]>
+[2023-03-13 22:15:03,175] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:15:03,175] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:15:03,175] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:15:03,186] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 22:10:00+00:00
+[2023-03-13 22:15:03,191] {standard_task_runner.py:52} INFO - Started process 7554 to run task
+[2023-03-13 22:15:03,195] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T22:10:00+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp6hl0aw8x', '--error-file', '/tmp/tmpitqpan46']
+[2023-03-13 22:15:03,196] {standard_task_runner.py:80} INFO - Job 145: Subtask extract_user
+[2023-03-13 22:15:03,240] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T22:10:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:15:03,301] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:10:00+00:00
+[2023-03-13 22:15:03,303] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 22:15:03,311] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 22:15:03,312] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 22:15:03,455] {http.py:106} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Mátio","last":"Barros"},"location":{"street":{"number":9427,"name":"Rua João Xxiii"},"city":"Jaboatão dos Guararapes","state":"Pernambuco","country":"Brazil","postcode":14039,"coordinates":{"latitude":"-73.9373","longitude":"-154.3301"},"timezone":{"offset":"+1:00","description":"Brussels, Copenhagen, Madrid, Paris"}},"email":"matio.barros@example.com","login":{"uuid":"a17f67a0-e8ff-4531-ad6e-42e156e88958","username":"heavytiger353","password":"southern","salt":"6G09tlhA","md5":"f69c4659663e83f666995b528ebaa3fd","sha1":"99c94e014421784044e49e3da1ed69058f8c7eea","sha256":"fbcb09d6a06c2d122ae18578f6e5a1bd8fd1943c28ef749d70f9318dfd64a818"},"dob":{"date":"1951-12-11T06:16:41.569Z","age":71},"registered":{"date":"2020-10-24T12:32:33.705Z","age":2},"phone":"(33) 9556-3595","cell":"(79) 3154-3047","id":{"name":"CPF","value":"682.108.484-62"},"picture":{"large":"https://randomuser.me/api/portraits/men/10.jpg","medium":"https://randomuser.me/api/portraits/med/men/10.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/10.jpg"},"nat":"BR"}],"info":{"seed":"aede6651afcdf01f","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 22:15:03,488] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T221000, start_date=20230313T221503, end_date=20230313T221503
+[2023-03-13 22:15:03,533] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:15:03,565] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

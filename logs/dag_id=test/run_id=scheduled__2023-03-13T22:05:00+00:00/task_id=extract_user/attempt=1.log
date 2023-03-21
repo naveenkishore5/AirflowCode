@@ -1,0 +1,26 @@
+[2023-03-13 22:10:03,980] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:05:00+00:00 [queued]>
+[2023-03-13 22:10:03,989] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:05:00+00:00 [queued]>
+[2023-03-13 22:10:03,990] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:10:03,991] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:10:03,992] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:10:04,002] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 22:05:00+00:00
+[2023-03-13 22:10:04,009] {standard_task_runner.py:52} INFO - Started process 7295 to run task
+[2023-03-13 22:10:04,013] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T22:05:00+00:00', '--job-id', '140', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp04xd931u', '--error-file', '/tmp/tmpshmfs01y']
+[2023-03-13 22:10:04,014] {standard_task_runner.py:80} INFO - Job 140: Subtask extract_user
+[2023-03-13 22:10:04,074] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T22:05:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:10:04,134] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:05:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:05:00+00:00
+[2023-03-13 22:10:04,136] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 22:10:04,148] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 22:10:04,151] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 22:10:04,303] {http.py:106} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Dragana","last":"Terzić"},"location":{"street":{"number":1781,"name":"Virska"},"city":"Loznica","state":"Nišava","country":"Serbia","postcode":28102,"coordinates":{"latitude":"62.6422","longitude":"40.7106"},"timezone":{"offset":"+6:00","description":"Almaty, Dhaka, Colombo"}},"email":"dragana.terzic@example.com","login":{"uuid":"3d7c2e75-35f3-4968-a4b0-20b5c29e47a5","username":"angrydog130","password":"pornographic","salt":"w8mKAF6q","md5":"f01d73a48eecbb6a80ab6ef5c2988616","sha1":"10e7f0e964e4361a39d0a61d42c7f8f4c0c6736e","sha256":"c206aa1789674d5f84aa86a5690b7dd31500c79ebd44030844dace735a3d32cc"},"dob":{"date":"1985-07-15T23:21:18.052Z","age":37},"registered":{"date":"2008-07-18T08:51:09.106Z","age":14},"phone":"015-8246-395","cell":"064-5274-660","id":{"name":"SID","value":"331989537"},"picture":{"large":"https://randomuser.me/api/portraits/women/76.jpg","medium":"https://randomuser.me/api/portraits/med/women/76.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/76.jpg"},"nat":"RS"}],"info":{"seed":"dc329afdc6755a13","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 22:10:04,335] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T220500, start_date=20230313T221003, end_date=20230313T221004
+[2023-03-13 22:10:04,388] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:10:04,428] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,29 @@
+[2022-09-13 18:52:31,693] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: example_bash_operator.this_will_skip scheduled__2022-09-12T00:00:00+00:00 [queued]>
+[2022-09-13 18:52:31,703] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: example_bash_operator.this_will_skip scheduled__2022-09-12T00:00:00+00:00 [queued]>
+[2022-09-13 18:52:31,705] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-13 18:52:31,706] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-09-13 18:52:31,708] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-13 18:52:31,731] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): this_will_skip> on 2022-09-12 00:00:00+00:00
+[2022-09-13 18:52:31,736] {standard_task_runner.py:52} INFO - Started process 1255 to run task
+[2022-09-13 18:52:31,746] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'example_bash_operator', 'this_will_skip', 'scheduled__2022-09-12T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', '/home/***/.local/lib/python3.7/site-packages/***/example_dags/example_bash_operator.py', '--cfg-path', '/tmp/tmpy3rw0orj', '--error-file', '/tmp/tmpwrxfgmny']
+[2022-09-13 18:52:31,748] {standard_task_runner.py:80} INFO - Job 5: Subtask this_will_skip
+[2022-09-13 18:52:31,833] {task_command.py:369} INFO - Running <TaskInstance: example_bash_operator.this_will_skip scheduled__2022-09-12T00:00:00+00:00 [running]> on host 5282528dd996
+[2022-09-13 18:52:31,904] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=example_bash_operator
+AIRFLOW_CTX_TASK_ID=this_will_skip
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-12T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-12T00:00:00+00:00
+[2022-09-13 18:52:31,906] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-09-13 18:52:31,908] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo "hello world"; exit 99;']
+[2022-09-13 18:52:31,918] {subprocess.py:85} INFO - Output:
+[2022-09-13 18:52:31,919] {subprocess.py:92} INFO - hello world
+[2022-09-13 18:52:31,920] {subprocess.py:96} INFO - Command exited with return code 99
+[2022-09-13 18:52:31,922] {taskinstance.py:1478} INFO - Bash command returned exit code 99. Skipping.
+[2022-09-13 18:52:31,934] {taskinstance.py:1400} INFO - Marking task as SKIPPED. dag_id=example_bash_operator, task_id=this_will_skip, execution_date=20220912T000000, start_date=20220913T185231, end_date=20220913T185231
+[2022-09-13 18:52:31,962] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-13 18:52:31,996] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

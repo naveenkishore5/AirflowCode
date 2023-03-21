@@ -1,0 +1,25 @@
+[2023-03-13 22:15:05,973] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.store_user scheduled__2023-03-13T22:10:00+00:00 [queued]>
+[2023-03-13 22:15:05,979] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.store_user scheduled__2023-03-13T22:10:00+00:00 [queued]>
+[2023-03-13 22:15:05,981] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:15:05,981] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:15:05,982] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:15:05,992] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): store_user> on 2023-03-13 22:10:00+00:00
+[2023-03-13 22:15:06,003] {standard_task_runner.py:52} INFO - Started process 7569 to run task
+[2023-03-13 22:15:06,020] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'store_user', 'scheduled__2023-03-13T22:10:00+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpo0_gt_4i', '--error-file', '/tmp/tmp6gb8e_w_']
+[2023-03-13 22:15:06,023] {standard_task_runner.py:80} INFO - Job 147: Subtask store_user
+[2023-03-13 22:15:06,087] {task_command.py:369} INFO - Running <TaskInstance: test.store_user scheduled__2023-03-13T22:10:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:15:06,151] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=store_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:10:00+00:00
+[2023-03-13 22:15:06,153] {postgres.py:127} INFO - Running copy expert: COPY users from stdin WITH DELIMITER AS ',', filename: /tmp/processed_user.csv
+[2023-03-13 22:15:06,168] {base.py:68} INFO - Using connection ID 'postgres' for task execution.
+[2023-03-13 22:15:06,188] {python.py:173} INFO - Done. Returned value was: None
+[2023-03-13 22:15:06,223] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=store_user, execution_date=20230313T221000, start_date=20230313T221505, end_date=20230313T221506
+[2023-03-13 22:15:06,411] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:15:06,488] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

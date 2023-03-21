@@ -1,0 +1,26 @@
+[2023-03-13 22:00:04,663] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T21:55:00+00:00 [queued]>
+[2023-03-13 22:00:04,670] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T21:55:00+00:00 [queued]>
+[2023-03-13 22:00:04,671] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:00:04,671] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:00:04,672] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:00:04,679] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 21:55:00+00:00
+[2023-03-13 22:00:04,683] {standard_task_runner.py:52} INFO - Started process 6783 to run task
+[2023-03-13 22:00:04,687] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T21:55:00+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp0vaa7gbm', '--error-file', '/tmp/tmpkfqb5515']
+[2023-03-13 22:00:04,688] {standard_task_runner.py:80} INFO - Job 130: Subtask extract_user
+[2023-03-13 22:00:04,737] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T21:55:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:00:04,784] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T21:55:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T21:55:00+00:00
+[2023-03-13 22:00:04,785] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 22:00:04,794] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 22:00:04,796] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 22:00:04,936] {http.py:106} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Miriam","last":"Coleman"},"location":{"street":{"number":4388,"name":"Prospect Rd"},"city":"Rockhampton","state":"Queensland","country":"Australia","postcode":9429,"coordinates":{"latitude":"-83.3177","longitude":"168.8608"},"timezone":{"offset":"+9:00","description":"Tokyo, Seoul, Osaka, Sapporo, Yakutsk"}},"email":"miriam.coleman@example.com","login":{"uuid":"b29e7ab6-2b08-4aaf-b7f6-fb2a80cbab60","username":"happywolf736","password":"whisky","salt":"ScFNN80D","md5":"c8f597f2f4ad3f4d8bd079f11dc9ee64","sha1":"8a9ddc29acc450e722f8c4affef4af41504b40f4","sha256":"a4dff9440de97e0eb22b6cbc3e152741b14ca33858ab5fb5441d31fb0cf9c00f"},"dob":{"date":"1951-12-18T05:23:17.434Z","age":71},"registered":{"date":"2015-02-20T04:04:10.452Z","age":8},"phone":"00-7766-3062","cell":"0428-324-506","id":{"name":"TFN","value":"118907709"},"picture":{"large":"https://randomuser.me/api/portraits/women/52.jpg","medium":"https://randomuser.me/api/portraits/med/women/52.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/52.jpg"},"nat":"AU"}],"info":{"seed":"60a914b1085fb775","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 22:00:04,963] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T215500, start_date=20230313T220004, end_date=20230313T220004
+[2023-03-13 22:00:04,982] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:00:05,011] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

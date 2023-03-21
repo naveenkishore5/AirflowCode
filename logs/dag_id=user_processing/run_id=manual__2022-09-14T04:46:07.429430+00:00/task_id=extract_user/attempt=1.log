@@ -1,0 +1,48 @@
+[2022-09-14 04:46:09,466] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user manual__2022-09-14T04:46:07.429430+00:00 [queued]>
+[2022-09-14 04:46:09,483] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user manual__2022-09-14T04:46:07.429430+00:00 [queued]>
+[2022-09-14 04:46:09,487] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-14 04:46:09,488] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-09-14 04:46:09,489] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-14 04:46:09,524] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2022-09-14 04:46:07.429430+00:00
+[2022-09-14 04:46:09,545] {standard_task_runner.py:52} INFO - Started process 12850 to run task
+[2022-09-14 04:46:09,559] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'manual__2022-09-14T04:46:07.429430+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpb1anl6ed', '--error-file', '/tmp/tmp18lzddnu']
+[2022-09-14 04:46:09,566] {standard_task_runner.py:80} INFO - Job 22: Subtask extract_user
+[2022-09-14 04:46:09,724] {task_command.py:369} INFO - Running <TaskInstance: user_processing.extract_user manual__2022-09-14T04:46:07.429430+00:00 [running]> on host 5282528dd996
+[2022-09-14 04:46:09,988] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-14T04:46:07.429430+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-14T04:46:07.429430+00:00
+[2022-09-14 04:46:09,994] {http.py:102} INFO - Calling HTTP method
+[2022-09-14 04:46:10,037] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2022-09-14 04:46:10,055] {http.py:129} INFO - Sending 'GET' to url: http://randomuser.me/api:5432/api/
+[2022-09-14 04:46:10,393] {http.py:142} ERROR - HTTP error: Not Found
+[2022-09-14 04:46:10,400] {http.py:143} ERROR - Not Found
+[2022-09-14 04:46:10,431] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 140, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://randomuser.me/api:5432/api/
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/operators/http.py", line 104, in execute
+    response = http.run(self.endpoint, self.data, self.headers, self.extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 130, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 183, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 144, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 404:Not Found
+[2022-09-14 04:46:10,440] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=user_processing, task_id=extract_user, execution_date=20220914T044607, start_date=20220914T044609, end_date=20220914T044610
+[2022-09-14 04:46:10,464] {standard_task_runner.py:97} ERROR - Failed to execute job 22 for task extract_user (404:Not Found; 12850)
+[2022-09-14 04:46:10,507] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-09-14 04:46:10,579] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

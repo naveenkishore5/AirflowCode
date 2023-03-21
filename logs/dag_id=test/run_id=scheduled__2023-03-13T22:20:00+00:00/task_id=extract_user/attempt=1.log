@@ -1,0 +1,26 @@
+[2023-03-13 22:25:02,697] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:20:00+00:00 [queued]>
+[2023-03-13 22:25:02,703] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:20:00+00:00 [queued]>
+[2023-03-13 22:25:02,703] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:25:02,704] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:25:02,704] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:25:02,711] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 22:20:00+00:00
+[2023-03-13 22:25:02,715] {standard_task_runner.py:52} INFO - Started process 8071 to run task
+[2023-03-13 22:25:02,718] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T22:20:00+00:00', '--job-id', '155', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp9qjlqghd', '--error-file', '/tmp/tmpvwersslh']
+[2023-03-13 22:25:02,719] {standard_task_runner.py:80} INFO - Job 155: Subtask extract_user
+[2023-03-13 22:25:02,760] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T22:20:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:25:02,806] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:20:00+00:00
+[2023-03-13 22:25:02,807] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 22:25:02,815] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 22:25:02,817] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 22:25:02,956] {http.py:106} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Patricia","last":"Morrison"},"location":{"street":{"number":7007,"name":"The Green"},"city":"Passage West","state":"Tipperary","country":"Ireland","postcode":84965,"coordinates":{"latitude":"-3.7310","longitude":"159.4231"},"timezone":{"offset":"+11:00","description":"Magadan, Solomon Islands, New Caledonia"}},"email":"patricia.morrison@example.com","login":{"uuid":"ca7fbebd-d68f-4041-8719-3e9254aa43d4","username":"organicelephant922","password":"alice1","salt":"AG9brhdB","md5":"e3c7a0d0b0ac5e4b92522c543d613467","sha1":"1a30e78cddbde305dc7b29ed74cada0d74e07678","sha256":"c759319247902f902fb6e1b9c535dd255609876d4e7b19a60b8597b91cd6e38e"},"dob":{"date":"1979-09-24T10:33:20.302Z","age":43},"registered":{"date":"2005-10-30T00:42:27.095Z","age":17},"phone":"031-663-2829","cell":"081-447-0958","id":{"name":"PPS","value":"4761591T"},"picture":{"large":"https://randomuser.me/api/portraits/women/32.jpg","medium":"https://randomuser.me/api/portraits/med/women/32.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/32.jpg"},"nat":"IE"}],"info":{"seed":"00906c260146d265","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 22:25:02,978] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T222000, start_date=20230313T222502, end_date=20230313T222502
+[2023-03-13 22:25:03,016] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:25:03,044] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

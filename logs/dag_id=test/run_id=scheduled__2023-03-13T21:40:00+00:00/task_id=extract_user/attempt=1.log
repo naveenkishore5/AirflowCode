@@ -1,0 +1,26 @@
+[2023-03-13 21:45:04,264] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T21:40:00+00:00 [queued]>
+[2023-03-13 21:45:04,271] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T21:40:00+00:00 [queued]>
+[2023-03-13 21:45:04,271] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 21:45:04,272] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 21:45:04,272] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 21:45:04,280] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 21:40:00+00:00
+[2023-03-13 21:45:04,286] {standard_task_runner.py:52} INFO - Started process 6015 to run task
+[2023-03-13 21:45:04,290] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T21:40:00+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp9xockq2u', '--error-file', '/tmp/tmpopym5ehl']
+[2023-03-13 21:45:04,292] {standard_task_runner.py:80} INFO - Job 115: Subtask extract_user
+[2023-03-13 21:45:04,345] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T21:40:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 21:45:04,409] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T21:40:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T21:40:00+00:00
+[2023-03-13 21:45:04,411] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 21:45:04,423] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 21:45:04,425] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 21:45:04,567] {http.py:106} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Anni","last":"Rajala"},"location":{"street":{"number":140,"name":"Mechelininkatu"},"city":"Toivakka","state":"Finland Proper","country":"Finland","postcode":94662,"coordinates":{"latitude":"-24.4291","longitude":"9.9540"},"timezone":{"offset":"+5:45","description":"Kathmandu"}},"email":"anni.rajala@example.com","login":{"uuid":"1c6c06e2-f004-4fb5-bc6e-0662ad46139f","username":"whitebear476","password":"greenbay","salt":"bcq0RtUX","md5":"0776400e4f231d0109f3fd2a1132bb8c","sha1":"12852233da04bbf763a02f2f836fafdc3877a1cc","sha256":"048e7497a7fca7080d1fea5109053b4c2d7c3c0bb3c2a809d1f6c5b9e7ad86de"},"dob":{"date":"1966-10-16T13:53:04.766Z","age":56},"registered":{"date":"2004-11-19T12:23:26.665Z","age":18},"phone":"08-340-169","cell":"048-192-12-83","id":{"name":"HETU","value":"NaNNA728undefined"},"picture":{"large":"https://randomuser.me/api/portraits/women/64.jpg","medium":"https://randomuser.me/api/portraits/med/women/64.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/64.jpg"},"nat":"FI"}],"info":{"seed":"388e5fe094d78e67","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 21:45:04,605] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T214000, start_date=20230313T214504, end_date=20230313T214504
+[2023-03-13 21:45:04,665] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 21:45:04,722] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

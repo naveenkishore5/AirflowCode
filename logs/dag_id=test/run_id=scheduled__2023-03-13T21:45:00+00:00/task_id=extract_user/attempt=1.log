@@ -1,0 +1,26 @@
+[2023-03-13 21:50:04,410] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T21:45:00+00:00 [queued]>
+[2023-03-13 21:50:04,417] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T21:45:00+00:00 [queued]>
+[2023-03-13 21:50:04,418] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 21:50:04,418] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 21:50:04,418] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 21:50:04,427] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 21:45:00+00:00
+[2023-03-13 21:50:04,432] {standard_task_runner.py:52} INFO - Started process 6268 to run task
+[2023-03-13 21:50:04,436] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T21:45:00+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp3p2aqdlt', '--error-file', '/tmp/tmpo0xie24j']
+[2023-03-13 21:50:04,437] {standard_task_runner.py:80} INFO - Job 120: Subtask extract_user
+[2023-03-13 21:50:04,518] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T21:45:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 21:50:04,605] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T21:45:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T21:45:00+00:00
+[2023-03-13 21:50:04,607] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 21:50:04,618] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 21:50:04,621] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 21:50:04,769] {http.py:106} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Franklin","last":"Grant"},"location":{"street":{"number":3811,"name":"Northaven Rd"},"city":"Hobart","state":"Australian Capital Territory","country":"Australia","postcode":6926,"coordinates":{"latitude":"-87.3714","longitude":"-101.7682"},"timezone":{"offset":"-12:00","description":"Eniwetok, Kwajalein"}},"email":"franklin.grant@example.com","login":{"uuid":"55068707-3079-4833-a8cc-0ad4318a766b","username":"silverpeacock148","password":"lesbians","salt":"ncBJGomN","md5":"c7c0c68418196fc0e12854add240763d","sha1":"5d8d0ca39f0c93cbb876f0f931ea185fc0218462","sha256":"7c29732183b7b6886fd080a2d98e29fce2a4580668f93c9c0826e1cae77f6e12"},"dob":{"date":"1980-07-28T18:03:20.385Z","age":42},"registered":{"date":"2019-10-11T18:22:51.978Z","age":3},"phone":"02-0564-4477","cell":"0448-463-488","id":{"name":"TFN","value":"856685591"},"picture":{"large":"https://randomuser.me/api/portraits/men/27.jpg","medium":"https://randomuser.me/api/portraits/med/men/27.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/27.jpg"},"nat":"AU"}],"info":{"seed":"44ded288065e5a00","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 21:50:04,793] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T214500, start_date=20230313T215004, end_date=20230313T215004
+[2023-03-13 21:50:04,859] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 21:50:04,901] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

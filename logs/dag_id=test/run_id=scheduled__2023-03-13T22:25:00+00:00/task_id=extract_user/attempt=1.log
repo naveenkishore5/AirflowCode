@@ -1,0 +1,26 @@
+[2023-03-13 22:30:03,818] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:25:00+00:00 [queued]>
+[2023-03-13 22:30:03,825] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.extract_user scheduled__2023-03-13T22:25:00+00:00 [queued]>
+[2023-03-13 22:30:03,825] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:30:03,826] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:30:03,826] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:30:03,836] {taskinstance.py:1377} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2023-03-13 22:25:00+00:00
+[2023-03-13 22:30:03,840] {standard_task_runner.py:52} INFO - Started process 8330 to run task
+[2023-03-13 22:30:03,845] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'extract_user', 'scheduled__2023-03-13T22:25:00+00:00', '--job-id', '160', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp9w0heopn', '--error-file', '/tmp/tmpmhb9dvib']
+[2023-03-13 22:30:03,846] {standard_task_runner.py:80} INFO - Job 160: Subtask extract_user
+[2023-03-13 22:30:03,891] {task_command.py:369} INFO - Running <TaskInstance: test.extract_user scheduled__2023-03-13T22:25:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:30:03,938] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:25:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:25:00+00:00
+[2023-03-13 22:30:03,939] {http.py:102} INFO - Calling HTTP method
+[2023-03-13 22:30:03,948] {base.py:68} INFO - Using connection ID 'user_api' for task execution.
+[2023-03-13 22:30:03,949] {http.py:129} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2023-03-13 22:30:04,073] {http.py:106} INFO - {"results":[{"gender":"female","name":{"title":"Miss","first":"Lucy","last":"Moreno"},"location":{"street":{"number":1149,"name":"Woodland St"},"city":"Warragul","state":"New South Wales","country":"Australia","postcode":7781,"coordinates":{"latitude":"-86.2168","longitude":"179.3750"},"timezone":{"offset":"-3:30","description":"Newfoundland"}},"email":"lucy.moreno@example.com","login":{"uuid":"99351ff3-7c87-40a8-9b03-1deaecd50d7c","username":"bluecat854","password":"121314","salt":"VGEcPIZR","md5":"3e640d8b599c21453515bc5d841cecda","sha1":"511be11e1685592911bb5a473922940b8b8ab592","sha256":"2ce565a6a55692f559b133fa410a863f52cb46a1369e09d094a413a7a4a9d796"},"dob":{"date":"1996-05-30T20:25:54.468Z","age":26},"registered":{"date":"2015-06-28T17:45:28.934Z","age":7},"phone":"07-8308-4840","cell":"0451-779-657","id":{"name":"TFN","value":"388711385"},"picture":{"large":"https://randomuser.me/api/portraits/women/89.jpg","medium":"https://randomuser.me/api/portraits/med/women/89.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/89.jpg"},"nat":"AU"}],"info":{"seed":"5da1a88ffefc80ea","results":1,"page":1,"version":"1.4"}}
+[2023-03-13 22:30:04,099] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=extract_user, execution_date=20230313T222500, start_date=20230313T223003, end_date=20230313T223004
+[2023-03-13 22:30:04,145] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:30:04,188] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,23 @@
+[2023-03-13 22:30:05,369] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.process_user scheduled__2023-03-13T22:25:00+00:00 [queued]>
+[2023-03-13 22:30:05,376] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test.process_user scheduled__2023-03-13T22:25:00+00:00 [queued]>
+[2023-03-13 22:30:05,377] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:30:05,378] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-03-13 22:30:05,378] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-13 22:30:05,387] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): process_user> on 2023-03-13 22:25:00+00:00
+[2023-03-13 22:30:05,393] {standard_task_runner.py:52} INFO - Started process 8333 to run task
+[2023-03-13 22:30:05,397] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'test', 'process_user', 'scheduled__2023-03-13T22:25:00+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmppsyj21ps', '--error-file', '/tmp/tmp9h8mh6rg']
+[2023-03-13 22:30:05,398] {standard_task_runner.py:80} INFO - Job 161: Subtask process_user
+[2023-03-13 22:30:05,454] {task_command.py:369} INFO - Running <TaskInstance: test.process_user scheduled__2023-03-13T22:25:00+00:00 [running]> on host 5282528dd996
+[2023-03-13 22:30:05,514] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=test
+AIRFLOW_CTX_TASK_ID=process_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-13T22:25:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-13T22:25:00+00:00
+[2023-03-13 22:30:05,532] {python.py:173} INFO - Done. Returned value was: None
+[2023-03-13 22:30:05,542] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=test, task_id=process_user, execution_date=20230313T222500, start_date=20230313T223005, end_date=20230313T223005
+[2023-03-13 22:30:05,570] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-03-13 22:30:05,596] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
